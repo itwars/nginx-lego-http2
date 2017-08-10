@@ -6,10 +6,10 @@ RUN	set -x \
 	&& rm -rf /var/cache/apk/* 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY itwars.conf /etc/nginx/conf.d/
-COPY start.sh /
-RUN chmod +x start.sh
+COPY reload.sh /
+RUN chmod +x reload.sh
 RUN mkdir -p /run/nginx
 EXPOSE 80
 EXPOSE 443
-CMD ["/start.sh"]
+CMD ["/reload.sh"]
 
