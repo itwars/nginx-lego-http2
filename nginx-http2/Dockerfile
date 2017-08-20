@@ -9,7 +9,7 @@ COPY itwars.conf /etc/nginx/conf.d/
 COPY reload.sh /
 RUN chmod +x reload.sh
 RUN mkdir -p /run/nginx
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
+EXPOSE 8443
 CMD ["/reload.sh"]
 
